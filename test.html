@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/normal.css">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .main-heading {
+            text-align: center;
+        }
+
+        .main-heading h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 70px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .main-heading h2::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 2px;
+            background-color: black;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -30px;
+        }
+
+        .main-heading h2::after {
+            content: '';
+            position: absolute;
+            transform: translateX(-50%);
+            left: 50%;
+            bottom: -38px;
+            width: 14px;
+            height: 14px;
+            border: 2px solid #333;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .main-heading p {
+            color: #777;
+            font-size: 14px;
+            line-height: 2;
+            width: 550px;
+            max-width: 100%;
+            margin: 0 auto 100px;
+        }
+
+
+        /* zzzzzzzzzzzzzzzzz */
+        .portfolio {
+            padding-top: var(--section-padding);
+            padding-bottom: var(--section-padding);
+        }
+
+        .portfolio .shuffle {
+            display: flex;
+            justify-content: center;
+        }
+
+        .portfolio .shuffle li {
+            padding: 10px;
+        }
+
+        .portfolio .shuffle li.active {
+            background-color: var(--main-color);
+            color: white;
+        }
+
+        .portfolio .imgs-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .portfolio .imgs-container .box {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .portfolio .imgs-container .box:hover .caption {
+            bottom: 0;
+        }
+
+        .portfolio .imgs-container .box:hover img {
+            transform: rotate(3deg) scale(1.1);
+        }
+
+        @media (min-width: 768px) {
+            .portfolio .imgs-container .box {
+                flex-basis: 50%;
+            }
+        }
+
+        @media (min-width: 1199px) {
+            .portfolio .imgs-container .box {
+                flex-basis: 25%;
+            }
+        }
+
+        .portfolio .imgs-container .box img {
+            max-width: 100%;
+            transition: 0.3s;
+        }
+
+        .portfolio .imgs-container .box .caption {
+            position: absolute;
+            left: 0;
+            padding: 20px;
+            background-color: white;
+            width: 100%;
+            transition: 0.3s;
+            bottom: -100%;
+        }
+
+        .portfolio .imgs-container .box .caption h4 {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .portfolio .imgs-container .box .caption p {
+            color: var(--main-color);
+        }
+
+        .portfolio .more {
+            background-color: var(--main-color);
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="portfolio">
+        <div class="container">
+            <div class="main-heading">
+                <h2>Portfolio</h2>
+                <p>
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+                    tincidunt.
+                </p>
+            </div>
+            <ul class="shuffle">
+                <li class="active">All</li>
+                <li>App</li>
+                <li>Photo</li>
+                <li>Web</li>
+                <li>Print</li>
+            </ul>
+        </div>
+        <div class="imgs-container">
+            <div class="box">
+                <img decoding="async" src="imagespo/shuffle-01.jpg" alt="" />
+                <div class="caption">
+                    <h4>Awesome Image</h4>
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img decoding="async" src="imagespo/shuffle-02.jpg" alt="" />
+                <div class="caption">
+                    <h4>Awesome Image</h4>
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img decoding="async" src="imagespo/shuffle-03.jpg" alt="" />
+                <div class="caption">
+                    <h4>Awesome Image</h4>
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img decoding="async" src="imagespo/shuffle-04.jpg" alt="" />
+                <div class="caption">
+                    <h4>Awesome Image</h4>
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img decoding="async" src="imagespo/shuffle-05.jpg" alt="" />
+                <div class="caption">
+                    <h4>Awesome Image</h4>
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img decoding="async" src="imagespo/shuffle-06.jpg" alt="" />
+                <div class="caption">
+                    <h4>Awesome Image</h4>
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img decoding="async" src="imagespo/shuffle-07.jpg" alt="" />
+                <div class="caption">
+                    <h4>Awesome Image</h4>
+                    <p>Photography</p>
+                </div>
+            </div>
+            <div class="box">
+                <img decoding="async" src="imagespo/shuffle-08.jpg" alt="" />
+                <div class="caption">
+                    <h4>Awesome Image</h4>
+                    <p>Photography</p>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="more">More</a>
+    </div>
+
+</body>
+
+</html>
